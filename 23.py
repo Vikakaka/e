@@ -25,7 +25,7 @@ text = response.text
 soup = bs4.BeautifulSoup(text, features='html.parser')
 articles = soup.find_all('article')
 
-for article in soup.find_all('article'):
+for article in articles:
     title = article.h2.a.text
     post = article.div.div.text
     href_l = article.find(class_="tm-article-snippet__title-link").attrs['href']
